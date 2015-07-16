@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP:Envelope xmlns:xsi="http://www.w3c.org/2001/XML-Schema-Instance" xmlns:SOAP="http://schemas.xmlsoap.org/soap/envelope/" xmlns:eb="http://www.oasis-open.org/committees/ebxml-msg/schema/msg-header-2_0.xsd" xmlns:hl7ebxml="urn:hl7-org:transport/ebxml/DSTUv1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
+<SOAP:Header>
+	<eb:MessageHeader SOAP:mustUnderstand="1" eb:version="2.0">
+		<eb:From>
+			<eb:PartyId eb:type="urn:nhs:names:partyType:ocs+serviceInstance">__FROM_PARTY_KEY__</eb:PartyId>
+		</eb:From>
+		<eb:To>
+			<eb:PartyId eb:type="urn:nhs:names:partyType:ocs+serviceInstance">__TO_PARTY_KEY__</eb:PartyId>
+		</eb:To>
+		<eb:CPAId>__CPAID__</eb:CPAId>
+		<eb:ConversationId>__CONVERSATION_ID__</eb:ConversationId>
+		<eb:Service>__SERVICE__</eb:Service>
+		<eb:Action>__INTERACTION_ID__</eb:Action>
+		<eb:MessageData>
+			<eb:MessageId>__MESSAGE_ID__</eb:MessageId>
+			<eb:Timestamp>__TIMESTAMP__</eb:Timestamp>
+		</eb:MessageData>
+		__DUPLICATE_ELIMINATION__
+	</eb:MessageHeader>
+	__ACK_REQUESTED__
+	__SYNC_REPLY__
+</SOAP:Header>
+<SOAP:Body>
+	<eb:Manifest eb:version="2.0">
+		__REFERENCES__
+	</eb:Manifest>
+</SOAP:Body>
+</SOAP:Envelope>

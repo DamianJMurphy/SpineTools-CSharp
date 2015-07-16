@@ -1,0 +1,13 @@
+      <author typeCode="AUT">
+         <AgentPersonSDS classCode="AGNT">
+            <id extension="__AUTHOR_URP__" root="1.2.826.0.1285.0.2.0.67"/>
+            <agentPersonSDS classCode="PSN" determinerCode="INSTANCE">
+               <id extension="__AUTHOR_UID__" root="1.2.826.0.1285.0.2.0.65"/>
+            </agentPersonSDS>
+            <part typeCode="PART">
+               <partSDSRole classCode="ROL">
+                  <id extension="__AUTHOR_ROLE__" root="1.2.826.0.1285.0.2.1.104"/>
+               </partSDSRole>
+            </part>
+         </AgentPersonSDS>
+      </author>

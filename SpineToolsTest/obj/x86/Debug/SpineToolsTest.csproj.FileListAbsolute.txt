@@ -1,0 +1,45 @@
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineToolsTest.exe
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineToolsTest.pdb
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineTools.dll
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\Newtonsoft.Json.dll
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineTools.pdb
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\obj\x86\Debug\SpineToolsTest.exe
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\obj\x86\Debug\SpineToolsTest.pdb
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\hl7_author_template.txt
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\hl7_wrapper_template.txt
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\ebxmlheadertemplate.txt
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\DistributionEnvelopeTools.dll
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\DistributionEnvelopeTools.pdb
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\Connection\ebxmlacktemplate.txt
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\ebxmlheadertemplate.txt
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\hl7_author_template.txt
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\hl7_wrapper_template.txt
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\Connection\ebxmlacktemplate.txt
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineToolsTest.exe
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineToolsTest.pdb
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineTools.dll
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\Newtonsoft.Json.dll
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineTools.pdb
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\DistributionEnvelopeTools.pdb
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\obj\x86\Debug\SpineToolsTest.exe
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\obj\x86\Debug\SpineToolsTest.pdb
+C:\Documents and Settings\iatest\My Documents\Visual Studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineSoapTemplate.txt
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\SpineSoapTemplate.txt
+D:\Documents and Settings\DAMU2\my documents\visual studio 2010\Projects\SpineTools\SpineToolsTest\bin\Debug\LICENSE-2.0.txt
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\ebxmlheadertemplate.txt
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\hl7_author_template.txt
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\hl7_wrapper_template.txt
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\Connection\ebxmlacktemplate.txt
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\SpineSoapTemplate.txt
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\LICENSE-2.0.txt
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\SpineToolsTest.exe
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\SpineToolsTest.pdb
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\SpineTools.dll
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\Newtonsoft.Json.dll
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\SpineTools.pdb
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\bin\Debug\DistributionEnvelopeTools.pdb
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\obj\x86\Debug\SpineToolsTest.exe
+C:\Documents and Settings\iatest\Desktop\SpineTools_CSharp\SpineToolsTest\obj\x86\Debug\SpineToolsTest.pdb

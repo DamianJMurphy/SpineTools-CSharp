@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E96A4B83-BC13-481C-98B6-116DB8B4D5B2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SpineTools</RootNamespace>
+    <AssemblyName>SpineTools</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DistributionEnvelopeTools, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\DistEnvDotNet\DistributionEnvelopeTools\obj\Release\DistributionEnvelopeTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\External\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Attachment.cs" />
+    <Compile Include="NullSynchronousResponseHandler.cs" />
+    <Compile Include="Connection\ConnectionManager.cs" />
+    <Compile Include="Connection\DefaultRegistryReadPasswordProvider.cs" />
+    <Compile Include="Connection\IPasswordProvider.cs" />
+    <Compile Include="Connection\Listener.cs" />
+    <Compile Include="DefaultFileSaveDistributionEnvelopeHandler.cs" />
+    <Compile Include="DefaultFileSaveSpineHandler.cs" />
+    <Compile Include="DefaultFileSaveSynchronousResponseHandler.cs" />
+    <Compile Include="EbXmlAcknowledgment.cs" />
+    <Compile Include="EbXmlHeader.cs" />
+    <Compile Include="EbXmlMessage.cs" />
+    <Compile Include="GeneralAttachment.cs" />
+    <Compile Include="IDistributionEnvelopeHandler.cs" />
+    <Compile Include="IExpiredMessageHandler.cs" />
+    <Compile Include="ISpineHandler.cs" />
+    <Compile Include="ISynchronousResponseHandler.cs" />
+    <Compile Include="ITKTrunkHandler.cs" />
+    <Compile Include="Sendable.cs" />
+    <Compile Include="ITKDistributionEnvelopeAttachment.cs" />
+    <Compile Include="Connection\SDScache.cs" />
+    <Compile Include="Connection\SDSconnection.cs" />
+    <Compile Include="Connection\SdsTransmissionDetails.cs" />
+    <Compile Include="SpineHL7Message.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpineSOAPRequest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="ebxmlheadertemplate.txt">
+      <SubType>Designer</SubType>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hl7_author_template.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hl7_wrapper_template.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Connection\ebxmlacktemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SpineSoapTemplate.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LICENSE-2.0.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Connection\persistDurations.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

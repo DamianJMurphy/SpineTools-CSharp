@@ -1,0 +1,26 @@
+<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:hl7="urn:hl7-org:v3">
+<SOAP-ENV:Header>
+	<wsa:MessageID>uuid:__MESSAGE_ID__</wsa:MessageID>
+	<wsa:Action>__SOAPACTION__</wsa:Action>
+	<wsa:To>__RESOLVED_URL__</wsa:To>
+	<wsa:From>
+		<wsa:Address>__MY_IP__</wsa:Address>
+	</wsa:From>
+	<hl7:communicationFunctionRcv>
+		<hl7:device>
+			<hl7:id root="1.2.826.0.1285.0.2.0.107" extension="__TO_ASID__"/>
+		</hl7:device>
+	</hl7:communicationFunctionRcv>
+	<hl7:communicationFunctionSnd>
+		<hl7:device>
+			<hl7:id root="1.2.826.0.1285.0.2.0.107" extension="__MY_ASID__"/>
+		</hl7:device>
+	</hl7:communicationFunctionSnd>
+	<wsa:ReplyTo>
+		<wsa:Address>__MY_IP__</wsa:Address>
+	</wsa:ReplyTo>
+</SOAP-ENV:Header>
+<SOAP-ENV:Body>
+__HL7_BODY__
+</SOAP-ENV:Body>
+</SOAP-ENV:Envelope>
