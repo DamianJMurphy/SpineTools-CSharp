@@ -16,3 +16,5 @@ SpineTools provides a Spine Directory Service interface  plus a cache .
 Integration points for received messages are provided by handlers keyed on service, with default (or example) handlers being provided that write received message content to files on disk. Configuration is via the registry.
 
 API documentation is in "Javadoc" form and  Doxygen (http://www.doxygen.org) is recommended to extract and format it.
+
+Files here are a copy of the Visual Studio project directory. A simple test caller is provided.
