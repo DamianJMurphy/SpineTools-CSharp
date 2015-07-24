@@ -39,6 +39,9 @@ namespace SpineTools
         private const string SDS_CERT_PASS_REGVAL = "CertPass";
         private const string SDS_CACHE_FILE_REGVAL = "cacheDirectory";
         private const string SDS_REFRESH_PERIOD_REGVAL = "RefreshPeriod";
+
+        private const string SDS_OPENTEST_REGVAL = "OpenTest";
+
         private const string URL_RESOLVER_FILE = "URLResolverFile";
         private const string MY_ASID = "MyAsid";
         private const string MY_PARTY_KEY = "MyPartyKey";
@@ -49,17 +52,20 @@ namespace SpineTools
 
         private static string[] ALL_ATTRIBUTES = { "*" };
         private static string[] UNIQUE_IDENTIFIER = { "uniqueIdentifier" };
-        //private const string SERVICES_ROOT = "ou=services, o=nhs";
-        private const string SERVICES_ROOT = "o=nhs";
+        private const string CIS_SERVICES_ROOT = "ou=services, o=nhs";
+        private const string OPENTEST_SERVICES_ROOT = "o=nhs";
         private const string MHSQUERY = "(&(objectclass=nhsMHS)(nhsMHSSvcIA=__SERVICE__)(nhsIDcode=__ORG__)__PARTYKEYFILTER__)";
         private const string PKFILTER = "(nhsMhsPartyKey=__PK__)";
         private const string ASQUERY = "(&(objectclass=nhsAS)(nhsASSvcIA=__SERVICE__)(nhsIDcode=__ORG__)(nhsMhsPartyKey=__PK__))";
         private const string PARTYKEY = "nhsmhspartykey";
         private const string UNIQUEIDENTIFIER = "uniqueidentifier";
         private const int SINGLEVALUE = 0;
-        // private const int LDAPS_PORT = 636;
 
-        private const int LDAPS_PORT = 389;
+        private const int LDAPS_PORT = 636;
+        private const int LDAP_PORT = 389;
+
+        private bool opentest = false;
+        private string serviceRoot = null;
 
         private string server = null;
         private string cacheDir = null;
@@ -90,6 +96,7 @@ namespace SpineTools
 
             string s = (string)Registry.GetValue(SDS_CONNECTION_REGSITRY_KEY, SDS_REFRESH_PERIOD_REGVAL, "");
             loadUrlResolver();
+
             if (s.Length > 0)
             {
                 try
@@ -110,6 +117,9 @@ namespace SpineTools
                     logger.WriteEntry(sb.ToString(), EventLogEntryType.Warning);
                 }
             }
+            s = (string)Registry.GetValue(SDS_CONNECTION_REGSITRY_KEY, SDS_OPENTEST_REGVAL, "");
+            opentest = (s.ToUpper().StartsWith("Y"));
+            serviceRoot = (opentest) ? OPENTEST_SERVICES_ROOT : CIS_SERVICES_ROOT;
             if (server.Length == 0)
             {
                 if (cacheDir.Length == 0)
@@ -280,19 +290,24 @@ namespace SpineTools
             }
 
             List<SdsTransmissionDetails> results = null;
-            SearchRequest srMhs = new SearchRequest(SERVICES_ROOT, sbMhs.ToString(), SearchScope.Subtree, ALL_ATTRIBUTES);
-            
-            using (LdapConnection connection = new LdapConnection(new LdapDirectoryIdentifier(server, Convert.ToInt32(LDAPS_PORT), true, false)))
+            SearchRequest srMhs = new SearchRequest(serviceRoot, sbMhs.ToString(), SearchScope.Subtree, ALL_ATTRIBUTES);
+
+            int ldapPort = (opentest) ? LDAP_PORT : LDAPS_PORT;
+            using (LdapConnection connection = new LdapConnection(new LdapDirectoryIdentifier(server, Convert.ToInt32(ldapPort), true, false)))
             {
                 connection.AuthType = AuthType.Anonymous;
-//                connection.SessionOptions.QueryClientCertificate = getCertificate;
-//                connection.SessionOptions.VerifyServerCertificate = verifyCertificate;
-//                connection.SessionOptions.SecureSocketLayer = true;
+                if (opentest)
+                {
+                    connection.SessionOptions.SecureSocketLayer = false;
+                }
+                else
+                {
+                    connection.SessionOptions.QueryClientCertificate = getCertificate;
+                    connection.SessionOptions.VerifyServerCertificate = verifyCertificate;
+                    connection.SessionOptions.SecureSocketLayer = true;
+                }
                 connection.SessionOptions.ProtocolVersion = 3;
                 
-                connection.SessionOptions.SecureSocketLayer = false;
-//                connection.SessionOptions.ProtocolVersion = 3;
-
                 List<Dictionary<string,List<string>>> dr = doSearch(connection, srMhs);
                 if (dr == null)
                     return null;
@@ -315,7 +330,7 @@ namespace SpineTools
                         sbAs.Replace("__ORG__", o);
 
                         sbAs.Replace("__PK__", mhs[PARTYKEY][SINGLEVALUE]);
-                        SearchRequest srAs = new SearchRequest(SERVICES_ROOT, sbAs.ToString(), SearchScope.Subtree, UNIQUE_IDENTIFIER);
+                        SearchRequest srAs = new SearchRequest(serviceRoot, sbAs.ToString(), SearchScope.Subtree, UNIQUE_IDENTIFIER);
                         List<Dictionary<string,List<string>>> asResponse = doSearch(connection, srAs);
 
                         // Error, but it is already reported, just don't try to populate
